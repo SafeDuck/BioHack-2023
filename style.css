@@ -85,7 +85,7 @@ p{
 .spaceship-box{
     height: 100vh;
     width: 100%;
-    background-color: aquamarine;
+    background: linear-gradient(180deg, black, #16134B);
     position: relative;
 }
 .spaceship-picture{
@@ -95,6 +95,15 @@ p{
     /* top: -45vh; */
 }
 .past-winners-box{
-    height: 100vh;
-    background-color: brown;
+    height: 200vh;
+    background: linear-gradient(180deg, #16134B, lightblue);
+    /* background: lightblue; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.past-winners-title{
+    margin-top: 1em;
+    font-size: 3em;
 }
