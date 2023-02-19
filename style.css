@@ -1,0 +1,100 @@
+p{
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    }
+   body{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: clip;
+   }
+   .title{
+    
+    max-width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    
+   }
+   .logo{
+    object-fit: contain;
+    height: 200px;
+    width: 200px;
+   }
+   .biohack{
+    font-size: 60px;
+    margin-top: 15px;
+   }
+   .hackathon{
+    display: inline-block;
+    font-size: 40px;
+    margin-top: 15px;
+   }
+   .words{
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+   }
+   .date{
+    font-size: 30px;
+    margin-top: 15px;
+   }
+
+   .mountain-box{
+    margin-top: 20vh;
+    
+}
+.mountain-picture{
+    max-width: 100%;
+
+}
+.about-us-box{
+    height: 200vh;
+}
+.rocket{
+    max-width: 25rem;
+    transform: rotate(120deg);
+    float: left;
+    position: absolute;
+}
+.sun{
+    max-width: 20rem;
+    float: right;
+    position: absolute;
+    right: 0px;
+}
+.about-us-box{
+   
+    height: 200vh;
+}
+.about-us{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: auto;
+}
+.about-us-title{
+    font-size: 9vh;
+}
+.about-us-text{
+    font-size: 5vh;
+}
+.spaceship-box{
+    height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+    position: relative;
+}
+.spaceship-picture{
+    width: 100%;
+    /* transform: rotate(-15deg); */
+    position: absolute;
+    /* top: -45vh; */
+}
+.past-winners-box{
+    height: 100vh;
+    background-color: brown;
+}
