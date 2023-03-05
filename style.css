@@ -1,3 +1,36 @@
+.hbox {
+    background: #f7f7ee;
+    width: 200px;
+    height: 200px;
+}
+.hover-container {
+    position: absolute;
+    perspective: 500px;
+}
+.hover-on-flip {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.hover-on-flip > * {
+    position: absolute;
+    backface-visibility: hidden;
+}
+.hover-container:hover .hover-on-flip {
+    transform: rotateY( 180deg );
+    transition: transform 0.5s;
+}
+.hover-on-flip-back {
+    background: black;
+    color: white;
+    transform: rotateY( 180deg );
+}
+
+
     p{
     color: white;
     /* padding: 0px;
