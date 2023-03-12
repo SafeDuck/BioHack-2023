@@ -190,13 +190,13 @@
     margin: auto;
     margin-top: 50px;
     display: flex;
+    justify-content: center;
    }
    .logo{
     object-fit: contain;
     object-position: right;
     padding-right: 2em;
-    height: 30vh;
-    width: 35vw;
+    height: 10em;
    }
    .biohack{
     padding: 0px;
