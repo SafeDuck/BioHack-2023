@@ -193,6 +193,8 @@
    }
    .logo{
     object-fit: contain;
+    object-position: right;
+    padding-right: 2em;
     height: 30vh;
     width: 35vw;
    }
