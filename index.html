@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <nav class="shift" id="nav-list">
+            <ul>
+              <li><a href="#">BIOHACK</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Winners</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Volunteer</a></li>
+              <li><a href="#">Team</a></li>
+            </ul>
+            <div class="menu-title">
+                <p class="about-us-text">BIOHACK</p>
+            </div>
+            <div class="menu" id="toggleButton">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+          </nav>
+
         <title>
-            BioHack 2023
+            BioHack 2023 
         </title>
         <link rel="stylesheet" type="text/css" href="./style.css" />
         <script> src="app.js"</script> 
+        <style>
+            html * {
+                font-weight: lighter;
+                font-family: Montserrat, sans-serif;
+            }
+          </style>
         <!-- How to use defer attribute? -->
     </head>
     <body>
@@ -16,7 +41,8 @@
             <div id="stars4"></div>
         </div>
         <div class="title hidden show">
-            <img class="logo" src="white-logo.png" alt="white-logo">
+            <div><img class="logo" src="white-logo.png" alt="white-logo"></div>
+            
             <div class="words">
                 <p class="biohack">
                     BIOHACK 2023
@@ -52,7 +78,7 @@
                     the opportunity to create innovative and personalized solutions and save lives with
                     their projects. During BioHack, students will get the opportunity to form teams and 
                     collaborate, attend workshops to learn about new technologies, and network with 
-                    insdurty parnters.
+                    industry partners.
                 </p>
             </span>
         </div>
@@ -254,4 +280,11 @@
             </div>
         </div>
     </body>
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const navList = document.getElementById('nav-list');
+        toggleButton.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        })
+    </script>
 </html>
