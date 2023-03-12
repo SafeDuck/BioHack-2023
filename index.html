@@ -2,9 +2,11 @@
 <html>
     <head>
         <title>
-            Practice
+            BioHack 2023
         </title>
         <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script> src="app.js"</script> 
+        <!-- How to use defer attribute? -->
     </head>
     <body>
         <div class="bg-animation">
@@ -13,7 +15,7 @@
             <div id="stars3"></div>
             <div id="stars4"></div>
         </div>
-        <div class="title">
+        <div class="title hidden show">
             <img class="logo" src="white-logo.png" alt="white-logo">
             <div class="words">
                 <p class="biohack">
@@ -55,91 +57,100 @@
             </span>
         </div>
         <div class="spaceship-box">
-            <img class="spaceship-picture" src="Spaceship01.svg" alt="spaceship">
+            <img class="spaceship-picture" src="spaceship.svg" alt="spaceship">
         </div>
+
+    <div class="gradient">
         <div class="past-winners-box">
             <p class="past-winners-title">
                 Our Past Winners!
             </p>
-            <img class="large-moon" src="moon.png" alt="large-moon">
+            <img class="large-moon" src="moon.svg" alt="large-moon">
+
+
+            <div class="container">
+                <div class="card">
+                  <div class="content">
+                    <div class="front">
+                        <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
+                    </div>
+                    <div class="back">
+                        Back!
+                    </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                  <div class="content">
+                    <div class="front">
+                        <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
+                    </div>
+                    <div class="back">
+                        Back!
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                  <div class="content">
+                    <div class="front">
+                        <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
+                    </div>
+                    <div class="back">
+                        Back!
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                      <div class="front">
+                          <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
+                      </div>
+                      <div class="back">
+                          Back!
+                      </div>
+                      </div>
+                  </div>
+                  <div class="card">
+                    <div class="content">
+                      <div class="front">
+                          <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
+                      </div>
+                      <div class="back">
+                          Back!
+                      </div>
+                      </div>
+                  </div>
+                  <div class="card">
+                    <div class="content">
+                      <div class="front">
+                          <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
+                      </div>
+                      <div class="back">
+                          Back!
+                      </div>
+                      </div>
+                  </div>
+                <div class="card">
+                  <div class="content">
+                    <div class="front">
+                        <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
+                    </div>
+                    <div class="back">
+                        Back!
+                    </div>
+                    </div>
+                </div>
+              </div>
         </div>
-        <div class="cards-box">
-            <div class="card">
-                <div class="content">
-                <div class="front">
-                    <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
-                </div>
-                <div class="back">
-                    Back!
-                </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                <div class="front">
-                    <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
-                </div>
-                <div class="back">
-                    Back!
-                </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                <div class="front">
-                    <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
-                </div>
-                <div class="back">
-                    Back!
-                </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                <div class="front">
-                    <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
-                </div>
-                <div class="back">
-                    Back!
-                </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                <div class="front">
-                    <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
-                </div>
-                <div class="back">
-                    Back!
-                </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                <div class="front">
-                    <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
-                </div>
-                <div class="back">
-                    Back!
-                </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                <div class="front">
-                    <img class="polaroid" src="1stplace.svg" alt="1st place polaroid">
-                </div>
-                <div class="back">
-                    Back!
-                </div>
-                </div>
-            </div>
-        </div>
+    </div>
+
+          
             
         </div>
         <p class="questions">
             Any Questions?
         </p>
+        
         <div id="faq">
             <!-- <h1>Any Quesions?</h1> -->
             <ul>
@@ -223,7 +234,24 @@
               </li>
             </ul>
         </div>
-
-        
+        <div class="gradient2">
+            <div class="get-involved">
+                <img class="large-moon2" src="moon2.svg" alt="large-moon">
+                <p class="get-involved-title">Get Involved</p>
+                <p class="get-involved-text">Not interested in hacking, but still interested in the behind-the-scenes of BioHack? Great! We'd love to have you on our team.</p>
+            </div>
+        </div>
+        <div class="our-team">
+            <p class="our-team-text">Our Team</p>
+            <div class="lead-photos">
+                <img class="circle show" src="circle.svg" alt="cirle">
+                <img class="circle  show" src="circle.svg" alt="cirle">
+                <img class="circle  show" src="circle.svg" alt="cirle">
+                <img class="circle  show" src="circle.svg" alt="cirle">
+                <img class="circle  show" src="circle.svg" alt="cirle">
+                <img class="circle  show" src="circle.svg" alt="cirle">
+                <img class="circle   show" src="circle.svg" alt="cirle">
+            </div>
+        </div>
     </body>
 </html>

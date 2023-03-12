@@ -127,24 +127,29 @@
     position: relative;
     /* top: -45vh; */
 }
+.gradient{
+  background: linear-gradient(180deg, #16134B, lightblue, black);
+}
 .past-winners-box{
     z-index: 0;
-    background: linear-gradient(180deg, #16134B, lightblue, black);
+    
     /* background: lightblue; */
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    position: relative;
 }
 .past-winners-title{
     /* margin-top: 9em; */
     font-size: 4em;
 }
 .large-moon{
+    margin-top: -50px;
     width: 100%;
     position: relative;
     z-index: 0; 
-    margin-right: -10%;
+    /* margin-right: -10%; */
 }
 
 .cards-box{
@@ -156,21 +161,43 @@
 }
 
 .polaroid{
-    max-width: 100%;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
-.card {
-    z-index: 3;
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 50%; */
-    width: 300px;
-    height: 300px;
-    /* margin: -150px; */
-    /* float: left; */
-    perspective: 500px;
+
+
+.full-wh {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
+  
+  .bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+
+
+
+
+
   
   .content {
     position: absolute;
@@ -207,31 +234,132 @@
   }
 
 
-.full-wh {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.bg-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.card {
+  perspective: 500px;
+  display: flex;
+  height: 20rem;
+  width: 15rem;
+  background-color: #467685;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
 }
 
-.bg-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
+.card:not(:first-child) {
+    margin-left: -50px;
 }
 
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+
+
+.circle:nth-child(2){
+  transition-delay: 200ms;
+}
+circle:nth-child(3){
+  transition-delay: 400ms
+}
+circle:nth-child(4){
+  transition-delay: 600ms
+}
+circle:nth-child(5){
+  transition-delay: 800ms
+}
+circle:nth-child(6){
+  transition-delay: 1000ms
+}
+circle:nth-child(7){
+  transition-delay: 1200ms
+}
+
+
+
+
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(-100%);
+  transition: all 1s
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+
+
+
+
+.gradient2{
+  background: linear-gradient(180deg, black,#16134B, lightblue);
+}
+.get-involved{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-involved-title{
+  position: absolute;
+  margin-bottom: 50rem;
+  color: black;
+  font-size: 5rem;
+}
+.get-involved-text{
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  max-width: 70%;
+  text-align: center;
+}
+.large-moon2{
+  position: relative;
+  width: 100%;
+}
+.our-team{
+  background: linear-gradient(180deg, lightblue, #16134B);
+}
+.our-team-text{
+  font-size: 3.5em;
+  text-align: center;
+  margin-top: 0;
+}
 
 .questions{
     margin-top: 2em;
@@ -239,7 +367,17 @@
     text-align: center;
     
 }
-
+.lead-photos{
+  max-width: 65rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  gap: 1.5rem;
+}
+.circle{
+  width: 15em;
+}
 .box-orange{
     background: #bc6421;
 }
