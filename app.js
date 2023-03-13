@@ -27,7 +27,7 @@ document.addEventListener('scroll', () => {
         const boundingClientRect = img.getBoundingClientRect();
         const stagger = Math.max(boundingClientRect.height, boundingClientRect.width) * (boundingClientRect.x / document.body.getBoundingClientRect().width);
         const y = boundingClientRect.y + stagger;
-        const offset = Math.max(y-window.innerHeight, 0) > 0 ? 2000 : 0;
+        const offset = Math.max(y-window.innerHeight*1.2, 0) > 0 ? 2000 : 0;
         img.style.transform = `translateX(${offset}px)`;
     }
 });
