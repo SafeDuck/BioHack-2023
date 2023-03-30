@@ -2,7 +2,12 @@
     color: white;
     }
 
+html, body {
+  overflow-x:hidden 
+}
+
    body{
+    position: absolute;
     background-color: black;
     margin: 0px;
     padding: 0px;
