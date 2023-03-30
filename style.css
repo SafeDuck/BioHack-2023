@@ -287,6 +287,124 @@
     z-index: 0; 
 }
 
+.polaroid{
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #f7f7ee;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  color: black;
+}
+
+.back {
+  background: #f7f7ee;
+  color: black;
+  transform: rotateY( 180deg );
+}
+.carousel-container {
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+padding: 20px;
+margin-top: 2em;
+align-self: center;
+position: absolute;
+height: 500px;
+width: 100%;
+}
+
+.card-carousel {
+--card-width: 80%;
+--card-max-width: 280px;
+--card-height: 350px;
+--carousel-min-width: 600px;
+z-index: 1;
+position: relative;
+margin: 0 auto;
+width: 100%;
+height: var(--card-height);
+min-width: var(--carousel-min-width);
+transition: filter .3s ease;
+}
+
+@media screen and (max-width: 640px) {
+.card-carousel {
+  margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+}
+}
+
+.card-carousel.smooth-return {
+transition: all .2s ease;
+}
+
+.card-carousel .card {
+perspective: 500px;
+width: var(--card-width);
+max-width: var(--card-max-width);
+text-align: center;
+padding: 1em;
+min-width: 250px;
+height: var(--card-height);
+position: absolute;
+margin: 0 auto;
+/* color: rgba(0,0,0,.5); */
+transition: inherit;
+/* -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3); */
+filter: brightness(.9);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.image-container {
+width: 8em;
+height: 8em;
+position: relative;
+background-size: cover;
+margin-bottom: 2em;
+padding: 1em;
+
+}
+
+.image-container::after {
+content: "";
+display: block;
+width: 120%;
+height: 120%;
+border: solid 3px rgba(0,0,0,.1);
+position: absolute;
+top: calc(-10% - 3px);
+left: calc(-10% - 3px);
+}
+
+
 /* GET INVOLVED */
 
 .gradient2{
