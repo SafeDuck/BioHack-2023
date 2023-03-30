@@ -1,40 +1,5 @@
-  .hbox {
-      background: #f7f7ee;
-      width: 200px;
-      height: 200px;
-  }
-.hover-container {
-    position: absolute;
-    perspective: 500px;
-}
-.hover-on-flip {
-    width: 200px;
-    height: 200px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-}
-.hover-on-flip > * {
-    position: absolute;
-    backface-visibility: hidden;
-}
-.hover-container:hover .hover-on-flip {
-    transform: rotateY( 180deg );
-    transition: transform 0.5s;
-}
-.hover-on-flip-back {
-    background: black;
+   p{
     color: white;
-    transform: rotateY( 180deg );
-}
-
-
-    p{
-    color: white;
-    /* padding: 0px;
-    margin: 0px; */
     }
 
    body{
@@ -44,6 +9,9 @@
     padding-top: 70px;
     overflow-x: clip;
    }
+   
+   /* APPLY BUTTON  */
+
    button{
     width: auto;
     background-color: #467685;
@@ -71,6 +39,9 @@
    .apply-button:active{
     transform: scale(0.95);
    }
+
+   /* NAV BAR */
+
    nav {
     width: 100%;
     margin: 0 auto;
@@ -82,7 +53,6 @@
     position: fixed;
     top: 0;
     z-index: 5;
-    /*font-size: 2vh;*/
   }
   nav ul {
     list-style: none;
@@ -184,6 +154,9 @@
         display: block;
     }
   }
+
+  /* TITLE AND LOGO */
+
    .title{
     padding: 0px;
     margin: 0px;
@@ -231,6 +204,8 @@
     margin-bottom: 3rem;
    }
 
+/* MOUNTAINS */
+
 .mountain-box{
     margin-top: 20vh;
     z-index: 1;
@@ -240,6 +215,9 @@
     width: 100%;
     z-index: 1;
 }
+
+/* ABOUT US */
+
 .about-us-box{
     display: flex;
 }
@@ -270,6 +248,9 @@
     font-size: 2rem;
     line-height: 1.5;
 }
+
+/* SPACESHIP */
+
 .spaceship-box{
     z-index: 0;
     width: 100%;
@@ -285,10 +266,11 @@
 .gradient{
   background: linear-gradient(180deg, #16134B, lightblue, black);
 }
+
+/* PAST WINNERS */
+
 .past-winners-box{
     z-index: 0;
-    
-    /* background: lightblue; */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -296,7 +278,6 @@
     position: relative;
 }
 .past-winners-title{
-    /* margin-top: 9em; */
     font-size: 4em;
 }
 .large-moon{
@@ -304,252 +285,9 @@
     width: 100%;
     position: relative;
     z-index: 0; 
-    /* margin-right: -10%; */
 }
 
-.cards-box{
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.polaroid{
-    width: 100%;
-    height: 100%;
-}
-
-
-
-.full-wh {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-}
-
-.bg-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .bg-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-}
-
-
-
-
-
-
-
-  
-  .content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  
-    transition: transform 1s;
-    transform-style: preserve-3d;
-  }
-  
-  .card:hover .content {
-    transform: rotateY( 180deg ) ;
-    transition: transform 0.5s;
-  }
-  
-  .front,
-  .back {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #f7f7ee;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 5px;
-    backface-visibility: hidden;
-    color: black;
-  }
-  
-  .back {
-    background: #f7f7ee;
-    color: black;
-    transform: rotateY( 180deg );
-  }
-
-
-/* .container {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-} */
-
-/* .card {
-  perspective: 500px;
-  display: flex;
-  height: 20rem;
-  width: 15rem;
-  background-color: #467685;
-  border-radius: 10px;
-  box-shadow: -1rem 0 3rem #000;
-  transition: 0.4s ease-out;
-  position: relative;
-  left: 0px;
-} */
-
-/* .card:not(:first-child) {
-    margin-left: -50px;
-}
-
-.card:hover {
-  transform: translateY(-20px);
-  transition: 0.4s ease-out;
-}
-
-.card:hover ~ .card {
-  position: relative;
-  left: 50px;
-  transition: 0.4s ease-out;
-} */
-
-
-
-
-.carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding: 20px;
-  margin-top: 2em;
-  align-self: center;
-  position: absolute;
-  height: 500px;
-  width: 100%;
-}
-
-.card-carousel {
-  --card-width: 80%;
-  --card-max-width: 280px;
-  --card-height: 350px;
-  --carousel-min-width: 600px;
-  z-index: 1;
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  height: var(--card-height);
-  min-width: var(--carousel-min-width);
-  transition: filter .3s ease;
-}
-
-@media screen and (max-width: 640px) {
-  .card-carousel {
-    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
-  }
-}
-
-.card-carousel.smooth-return {
-  transition: all .2s ease;
-}
-
-.card-carousel .card {
-  perspective: 500px;
-  width: var(--card-width);
-  max-width: var(--card-max-width);
-  text-align: center;
-  padding: 1em;
-  min-width: 250px;
-  height: var(--card-height);
-  position: absolute;
-  margin: 0 auto;
-  /* color: rgba(0,0,0,.5); */
-  transition: inherit;
-  /* -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3); */
-  filter: brightness(.9);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.image-container {
-  width: 8em;
-  height: 8em;
-  position: relative;
-  background-size: cover;
-  margin-bottom: 2em;
-  padding: 1em;
-  
-}
-
-.image-container::after {
-  content: "";
-  display: block;
-  width: 120%;
-  height: 120%;
-  border: solid 3px rgba(0,0,0,.1);
-  position: absolute;
-  top: calc(-10% - 3px);
-  left: calc(-10% - 3px);
-}
-
-
-/* .circle:nth-child(2){
-  transition-delay: 200ms;
-}
-circle:nth-child(3){
-  transition-delay: 400ms
-}
-circle:nth-child(4){
-  transition-delay: 600ms
-}
-circle:nth-child(5){
-  transition-delay: 800ms
-}
-circle:nth-child(6){
-  transition-delay: 1000ms
-}
-circle:nth-child(7){
-  transition-delay: 1200ms
-}
-
-
-
-
-.hidden{
-  opacity: 0;
-  filter: blur(5px);
-  transform: translate(-100%);
-  transition: all 1s
-}
-
-.show{
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
- */
-
-
-
+/* GET INVOLVED */
 
 .gradient2{
   background: linear-gradient(180deg, black,#16134B, lightblue);
@@ -578,6 +316,9 @@ circle:nth-child(7){
   position: relative;
   width: 100%;
 }
+
+/* OUR TEAM */
+
 .our-team{
   background: linear-gradient(180deg, lightblue, #16134B);
   padding-bottom: 10rem;
@@ -587,7 +328,11 @@ circle:nth-child(7){
   text-align: center;
   margin-top: 0;
 }
+.circle{
+  width: 15em;
+}
 
+/* FAQ */
 .questions{
     margin-top: 2em;
     font-size: 3.5em;
@@ -602,9 +347,7 @@ circle:nth-child(7){
   margin: auto;
   gap: 1.5rem;
 }
-.circle{
-  width: 15em;
-}
+
 .box-orange{
     background: #bc6421;
 }
@@ -652,7 +395,6 @@ circle:nth-child(7){
     color: white;
     font-family: 'hm_light', sans-serif;
     font-size: 1.5rem;
-    /* line-height: 34px; */
     text-align: center;
     padding-top: 15px;
     text-transform: none;
@@ -697,9 +439,6 @@ circle:nth-child(7){
     overflow: hidden;
     padding: 0;
     margin: 0;
-    /*padding-bottom: 4px;*/
-    /*padding-top: 18px;*/
-    /* background: #fff; */
     box-shadow: 0 3px 10px -2px rgba(0,0,0,0.1);
     border-radius: .75rem;
     -webkit-tap-highlight-color: transparent;
@@ -742,11 +481,9 @@ circle:nth-child(7){
     color: white;
   }
   #faq ul li input[type=checkbox]:checked ~ p {
-    /*margin-top: 0;*/
     max-height: 0;
     transition: .3s;
     opacity: 0;
-    /*transform: translate(0, 50%);*/
   }
   #faq ul li input[type=checkbox]:checked ~ i:before {
     transform: translate(2px, 0) rotate(45deg);
@@ -755,10 +492,8 @@ circle:nth-child(7){
     transform: translate(-2px, 0) rotate(-45deg);
   }
 
-
-
-
   /* FOOTER */
+
   .footer {
     position: relative;
     width: 100%;
@@ -875,7 +610,23 @@ circle:nth-child(7){
     }
   }
   
-  
+  /* STARS */
+
+.full-wh {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.bg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 #stars {
     z-index: -1;
