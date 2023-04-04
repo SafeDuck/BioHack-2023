@@ -14,15 +14,20 @@ html, body {
     padding-top: 70px;
     overflow-x: clip;
    }
-   
+   .icon {
+    height: 2.8rem;
+    background-color: rgba(233, 164, 247, 0.658);
+   }
    /* APPLY BUTTON  */
 
    button{
     width: auto;
-    background-color: #467685;
-    color: white;
+    background-color: #ffffff5b;
+    color: rgb(255, 255, 255);
     border-radius: 32px;
     font-size: 3vh;
+    text-shadow: 00 0 5px #ffffffcd, 0 0 25px
+    #97B0F2, 0 0 50px #97B0F2, 0 0 200px #ffffffcd;
     padding: .5rem;
     position: relative;
     border: none;
@@ -36,9 +41,9 @@ html, body {
     z-index: -1;
    }
    .apply-button:hover{
-    background: #467685;
-    box-shadow: 0 0 5px #467685, 0 0 25px
-    #467685, 0 0 50px #467685, 0 0 200px #467685;
+    background: #ffffff8d;
+    box-shadow: 0 0 5px #ffffff5b, 0 0 25px
+    #97B0F2, 0 0 50px #97B0F2, 0 0 200px #ffffff5b;
     cursor: pointer;
    }
    .apply-button:active{
@@ -49,8 +54,8 @@ html, body {
 
    nav {
     width: 100%;
-    margin: 0 auto;
-    background: #467685;
+    margin: auto;
+    background: #ffffffe8;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -60,106 +65,79 @@ html, body {
     z-index: 5;
   }
   nav ul {
-    list-style: none;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
   }
   nav ul li {
+    list-style: none;
     display: inline-block;
-    width: 15vh;
   }
   nav ul li a {
     display: block;
     padding: 0.3rem;
     text-decoration: none;
-    color: rgb(237, 231, 231);
+    color: rgb(43, 43, 43);
     font-weight: 500;
   }
-  nav ul li a,
-  nav ul li a:after,
-  nav ul li a:before,
-  #lead-photos>* {
-    transition: all .5s;
+  a.active,a:hover{
+    background: #97aff275;
+    transition: .8s;
   }
-  nav ul li a:hover {
-    color: rgb(187, 6, 6);
+  nav ul li:hover {
+    color: rgb(0, 0, 0);
   }
-
-  nav.shift ul li a {
-    position:relative;
-    z-index: 1;
-  }
-  nav.shift ul li a:hover {
-    color: #52a6c7;
-  }
-  nav.shift ul li a:after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    height: 1px;
-    content: '.';
-    color: transparent;
-    background: #eff1f1;
-    visibility: none;
-    opacity: 0.2;
-    z-index: -1;
-  }
-  nav.shift ul li a:hover:after {
-    opacity: 1;
-    visibility: visible;
-    height: 100%;
-  }
-  .menu {
+  .checkbtn{
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
     display: none;
   }
-  .menu-title {
-        display: none;
-    }
-  .menu-line {
-    width: 20px;
-    height: 0.3vh;
-    background-color: #eff1f1;
-    margin-bottom: 0.5vh;
+  #check{
+    display: none;
   }
-  @media all and (max-width: 812px) {
-    nav {
-        flex-direction: column;
-        position: relative;
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
     }
-    
-    .menu-title {
-        display: inline;
-        color: rgb(237, 231, 231);
-        font-weight: 600;
-        text-align: center;
-        position: absolute;
-        letter-spacing: 5px;
-    }
-
-    .menu {
-        display: block;
-        position: absolute;
-        right: 15px;
-    }
-    nav ul {
-        list-style-type: none;
-        width: 100%;
-        text-align: center;
-        padding-top: 10px;
-    }
-    nav ul li {
-        display: block;
-        
-    }
-    .active {
-        display: block;
+    nav ul li a{
+      font-size: 16px;
     }
   }
-
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
   /* TITLE AND LOGO */
 
    .title{
@@ -208,6 +186,10 @@ html, body {
     margin-top: 1rem;
     margin-bottom: 3rem;
    }
+   .about-us-text{
+    font-size: 3.0rem;
+    line-height: 1.5;
+}
 
 /* MOUNTAINS */
 
@@ -247,10 +229,10 @@ html, body {
     margin: auto;
 }
 .about-us-title{
-    font-size: 9vh;
+    font-size: 8.5vh;
 }
 .about-us-text{
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 
@@ -431,7 +413,7 @@ left: calc(-10% - 3px);
 .get-involved-text{
   position: absolute;
   color: black;
-  font-size: 3rem;
+  font-size: 2.4rem;
   max-width: 70%;
   text-align: center;
 }
@@ -471,14 +453,12 @@ left: calc(-10% - 3px);
   gap: 1.5rem;
 }
 
-.box-orange{
-    background: #bc6421;
+.box-one{
+    background: #5A2016;
+    border-color: rgb(60, 22, 230);
 }
-.box-tan{
-    background: #b3888f;
-}
-.box-red{
-    background: #d34751;
+.box-two{
+    background: #BB5239;
 }
 
 
@@ -508,15 +488,15 @@ left: calc(-10% - 3px);
   }
   
   #faq h1 {
-    color: #000;
+    color: rgb(255, 255, 255);
     margin-bottom: 30px;
     margin-top: 0;
   }
   
   #faq h2 {
     font-weight: bold;
-    color: white;
-    font-family: 'hm_light', sans-serif;
+    color: rgb(255, 255, 255);
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 1.5rem;
     text-align: center;
     padding-top: 15px;
@@ -530,9 +510,9 @@ left: calc(-10% - 3px);
   }
   
   #faq p {
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
-    font-family: 'hm_light', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 1rem;
     line-height: 1.45;
     position: relative;
@@ -562,7 +542,8 @@ left: calc(-10% - 3px);
     overflow: hidden;
     padding: 0;
     margin: 0;
-    box-shadow: 0 3px 10px -2px rgba(0,0,0,0.1);
+    box-shadow: 00 0 5px #ffffff38, 0 0 25px
+    #97aff2aa, 0 0 50px #97aff292, 0 0 200px #ffffff41;
     border-radius: .75rem;
     -webkit-tap-highlight-color: transparent;
   }
@@ -581,7 +562,7 @@ left: calc(-10% - 3px);
   #faq ul li i:before, ul li i:after {
     content: "";
     position: absolute;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     width: 3px;
     height: 9px;
   }
@@ -601,7 +582,7 @@ left: calc(-10% - 3px);
     touch-action: manipulation;
   }
   #faq ul li input[type=checkbox]:checked ~ h2 {
-    color: white;
+    color: rgb(255, 255, 255);
   }
   #faq ul li input[type=checkbox]:checked ~ p {
     max-height: 0;
@@ -620,7 +601,7 @@ left: calc(-10% - 3px);
   .footer {
     position: relative;
     width: 100%;
-    background: #467685;
+    background: #97B0F2;
     min-height: 100px;
     padding: 20px;
     display: flex;
