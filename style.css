@@ -219,10 +219,20 @@ html{scroll-behavior: smooth;}
 }
 .sun{
     max-width: 20rem;
-    /* float: right; */
     position: absolute;
     right: 0px;
 }
+@media screen and (max-width: 900px) {
+  .sun {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .rocket {
+    display: none;
+  }
+}
+
 .about-us{
     width: 60%;
     display: flex;
@@ -232,12 +242,22 @@ html{scroll-behavior: smooth;}
     margin: auto;
 }
 .about-us-title{
-    font-size: 8.5vh;
+    font-size: 4rem;
 }
 .about-us-text{
     font-size: 1.5rem;
     line-height: 1.5;
 }
+
+.about-us-text1{
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.about-us-text2{
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
 
 /* SPACESHIP */
 
@@ -321,7 +341,7 @@ justify-content: center;
 align-items: center;
 overflow: hidden;
 padding: 20px;
-margin-top: 2em;
+margin-top: 20em;
 align-self: center;
 position: absolute;
 height: 500px;
@@ -433,7 +453,7 @@ left: calc(-10% - 3px);
   padding-bottom: 10rem;
 }
 .our-team-text{
-  font-size: 3.5em;
+  font-size: 4em;
   text-align: center;
   margin-top: 0;
   color: black;
