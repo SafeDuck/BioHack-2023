@@ -116,7 +116,7 @@ html{scroll-behavior: smooth;}
     .checkbtn{
       display: block;
     }
-    ul{
+    /* ul{
       position: fixed;
       width: 100%;
       height: 100vh;
@@ -125,7 +125,7 @@ html{scroll-behavior: smooth;}
       left: -100%;
       text-align: center;
       transition: all .5s;
-    }
+    } */
     nav ul li{
       display: block;
       margin: 50px 0;
@@ -145,14 +145,13 @@ html{scroll-behavior: smooth;}
   /* TITLE AND LOGO */
 
    .title{
-    padding: 0px;
-    margin: 0px;
     max-width: 100%;
     margin: auto;
     margin-top: 50px;
     display: flex;
     justify-content: center;
    }
+   
    .logo{
     object-fit: contain;
     object-position: right;
@@ -193,17 +192,54 @@ html{scroll-behavior: smooth;}
     font-size: 3.0rem;
     line-height: 1.5;
   } 
+  @media screen and (max-width: 435px) {
+    .title{
+      align-items: center;
+      margin-top: 10rem;
+    }
+    .logo {
+      padding-right: 0;
+      height: 6em;
+    }
+    .biohack{
+      font-size: 2rem;
+      margin-top: 0rem;
+      letter-spacing: .3rem;
+    }
+    .hackathon{
+      font-size: 1.3rem;
+      letter-spacing: 0;
+      margin-top: 0;
+    }
+    .date{
+      font-size: 1rem;
+      font-weight: 100;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    button{
+      margin-top: 2.3rem;
+      width: 50%;
+      font-size: 1rem;
+    }
+  }
+  
 
 /* MOUNTAINS */
 
 .mountain-box{
-    margin-top: 20vh;
-    z-index: 1;
+  z-index: 1;
 }
 .mountain-picture{
     position: relative;
     width: 100%;
     z-index: 1;
+}
+
+@media screen and (max-width: 435px){
+  .mountain-box{
+    margin-top: 25vh;
+  }
 }
 
 /* ABOUT US */
@@ -226,12 +262,11 @@ html{scroll-behavior: smooth;}
   .sun {
     display: none;
   }
-}
-@media screen and (max-width: 900px) {
   .rocket {
     display: none;
   }
 }
+
 
 .about-us{
     width: 60%;
@@ -256,6 +291,24 @@ html{scroll-behavior: smooth;}
 .about-us-text2{
   font-size: 2rem;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 435px){
+  .about-us{
+    width: 80%;
+  }
+  .about-us-title{
+    font-size: 2rem;
+  }
+  .about-us-text{
+    font-size: 1rem;
+  }
+  .about-us-text1{
+    font-size: 1.3rem;
+  }
+  .about-us-text2{
+    font-size: 1.3rem
+  }
 }
 
 
@@ -290,6 +343,11 @@ html{scroll-behavior: smooth;}
 .past-winners-title{
     font-size: 4em;
 }
+@media screen and (max-width: 435px){
+  .past-winners-title{
+    font-size: 2rem;
+  }
+}
 .large-moon{
     margin-top: -50px;
     width: 100%;
@@ -298,9 +356,26 @@ html{scroll-behavior: smooth;}
 }
 
 .polaroid{
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
-
+.card-tag{
+  display: block;
+  font-size: 2rem;
+  color: black;
+  margin: 0;
+  margin-top: 14px;
+}
+@media screen and (max-width: 435px){
+  .card-tag{
+    font-size: 1rem;
+  }
+  .polaroid{
+    margin-top: 15px;
+  }
+}
 .content {
   position: absolute;
   width: 100%;
@@ -324,12 +399,34 @@ html{scroll-behavior: smooth;}
   width: 100%;
   background: #f7f7ee;
   text-align: center;
-  font-size: 15px;
+  font-size: 1rem;
   border-radius: 5px;
   backface-visibility: hidden;
   color: black;
+  flex-direction: column;
 }
-
+.front{
+  flex-direction: column;
+}
+.card-project-title{
+  font-size: 1.3rem;
+  color: black;
+}
+@media screen and (max-width: 435px){
+  .front,
+  .back {
+    font-size: .7rem;
+    width: 11rem;
+    height: 14rem;
+  }
+  .content{
+    width: 11rem;
+    height: 14rem;
+  }
+  .card-project-title{
+    font-size: 1rem;
+  }
+}
 .back {
   background: #f7f7ee;
   color: black;
@@ -341,7 +438,7 @@ justify-content: center;
 align-items: center;
 overflow: hidden;
 padding: 20px;
-margin-top: 20em;
+margin-top: 7.5rem;
 align-self: center;
 position: absolute;
 height: 500px;
@@ -362,11 +459,11 @@ min-width: var(--carousel-min-width);
 transition: filter .3s ease;
 }
 
-@media screen and (max-width: 640px) {
+/* @media screen and (max-width: 640px) {
 .card-carousel {
   margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
 }
-}
+} */
 
 .card-carousel.smooth-return {
 transition: all .2s ease;
@@ -440,6 +537,16 @@ left: calc(-10% - 3px);
   max-width: 70%;
   text-align: center;
 }
+@media screen and (max-width: 435px){
+  .get-involved-title{
+    font-size: 2rem;
+    margin-bottom: 12rem;
+  }
+  .get-involved-text{
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+}
 .large-moon2{
   position: relative;
   width: 100%;
@@ -461,13 +568,16 @@ left: calc(-10% - 3px);
 .circle{
   width: 15em;
 }
-
-/* FAQ */
-.questions{
-    margin-top: 2em;
-    font-size: 3.5em;
-    text-align: center;
-    
+@media screen and (max-width: 435px){
+  .our-team-text{
+    font-size: 2rem;
+  }
+  .circle{
+    width: 7rem;
+  }
+  /* .lead-photos{
+    max-width: 90%
+  } */
 }
 .lead-photos{
   max-width: 65rem;
@@ -477,7 +587,18 @@ left: calc(-10% - 3px);
   margin: auto;
   gap: 1.5rem;
 }
-
+/* FAQ */
+.questions{
+    margin-top: 2em;
+    font-size: 3.5em;
+    text-align: center;
+    
+}
+@media screen and (max-width: 435px){
+  .questions{
+    font-size: 2em;
+  }
+}
 .box-one{
     background: #5A2016;
     border-color: rgb(60, 22, 230);
@@ -488,12 +609,22 @@ left: calc(-10% - 3px);
 
 
 #faq {
-    max-width: 60%;
+    width: 60%;
     margin: auto;
     padding: 0 0px;
     text-align: center;
   }
-  
+  @media screen and (max-width: 435px){
+    #faq{
+      width: 80%;
+    }
+    #faq h2 {
+      font-size: 1rem;
+    }
+    #faq p {
+      font-size: .7rem;
+    }
+  }
   section.faq {
     padding-top: 2em;
     padding-bottom: 3em;
@@ -522,23 +653,24 @@ left: calc(-10% - 3px);
     font-weight: bold;
     color: rgb(255, 255, 255);
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: center;
     padding-top: 15px;
     text-transform: none;
     font-weight: 300;
     letter-spacing: 1px;
     display: block;
-    margin: 0;
+    margin: auto;
     cursor: pointer;
     transition: .2s;
+    max-width: 90%;
   }
   
   #faq p {
     color: rgb(255, 255, 255);
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.45;
     position: relative;
     overflow: hidden;
@@ -628,7 +760,8 @@ left: calc(-10% - 3px);
     width: 100%;
     background: #97B0F2;
     min-height: 100px;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
