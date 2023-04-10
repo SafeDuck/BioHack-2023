@@ -16,12 +16,7 @@ a {
 }    
 li {
     list-style: none;
-    display: inline-block;
 }
-
-input[type=checkbox]{
-    display: none;
-} 
 
 html{scroll-behavior: smooth;}
 
@@ -103,7 +98,7 @@ a:hover,a.active{
     background: none;
     color: #000000;
     padding: 0.2em;
-  }
+}
     
 .hamburger {
     display: none;
@@ -145,8 +140,9 @@ a:hover,a.active{
     transition: 0.3s ease;
     }
     
-    input[type=checkbox]:checked ~ .menu{
-    display: block;
+    .menu li {
+        list-style: none;
+        display: inline-block;
     }
     
     .hamburger {
@@ -521,14 +517,14 @@ left: calc(-10% - 3px);
 
 .get-involved-title{
   position: absolute;
-  margin-bottom: 50rem;
+  margin-bottom: 50vw;
   color: black;
-  font-size: 5rem;
+  font-size: 5em;
 }
 .get-involved-text{
   position: absolute;
   color: black;
-  font-size: 2.4rem;
+  font-size: 3vw;
   max-width: 70%;
   text-align: center;
 }
