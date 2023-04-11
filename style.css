@@ -438,11 +438,26 @@ justify-content: center;
 align-items: center;
 overflow: hidden;
 padding: 20px;
-margin-top: 7.5rem;
+margin-top: 33.5rem;
 align-self: center;
 position: absolute;
 height: 500px;
-width: 100%;
+width: 85%;
+}
+
+@media screen and (max-width: 435px){
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 5.5rem;
+    align-self: center;
+    position: absolute;
+    height: 500px;
+    width: 120%;
+  }
 }
 
 .card-carousel {
@@ -567,6 +582,7 @@ left: calc(-10% - 3px);
 }
 .circle{
   width: 15em;
+  z-index: 1;
 }
 @media screen and (max-width: 435px){
   .our-team-text{
@@ -574,10 +590,19 @@ left: calc(-10% - 3px);
   }
   .circle{
     width: 7rem;
+    z-index: 1;
   }
   /* .lead-photos{
     max-width: 90%
   } */
+}
+.directors {
+  max-width: 65rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  gap: 1.5rem;
 }
 .lead-photos{
   max-width: 65rem;
@@ -619,10 +644,10 @@ left: calc(-10% - 3px);
       width: 80%;
     }
     #faq h2 {
-      font-size: 1rem;
+      font-size: 1em;
     }
     #faq p {
-      font-size: .7rem;
+      font-size: 0.7em;
     }
   }
   section.faq {

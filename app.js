@@ -11,17 +11,66 @@
 
 // const hiddenElements = document.querySelectorAll('.hidden');
 // hiddenElements.forEach((el) => observer.observe(el));
+const directorPhotos = document.querySelector('#directors');
+const Evelyn = document.createElement('img');
+  Evelyn.classList.add('circle', 'show');
+  Evelyn.src = "Evelyn.png";
+  Evelyn.alt = "Team_Blank.png";
+  directorPhotos.append(Evelyn);
+const Jimmy = document.createElement('img');
+  Jimmy.classList.add('circle', 'show');
+  Jimmy.src = "Jimmy.png";
+  Jimmy.alt = "Team_Blank.png";
+  directorPhotos.append(Jimmy);
+  const Gagan = document.createElement('img');
+  Gagan.classList.add('circle', 'show');
+  Gagan.src = "Team_Blank.png";
+  Gagan.alt = "Team_Blank.png";
+  directorPhotos.append(Gagan);
 
 const leadPhotos = document.querySelector('#lead-photos');
-const svgs = [...new Array(11)].map(() => 'circle.svg');
-const leadImages = svgs.map((src) => {
-    const img = document.createElement('img');
-    img.classList.add('circle', 'show');
-    img.src = src;
-    img.alt = "circle";
-    leadPhotos.append(img);
-    return img;
-});
+const teamPics = [...new Array(11)];
+  const Sarrah = document.createElement('img');
+  Sarrah.classList.add('circle', 'show');
+  Sarrah.src = "Sarrah.png";
+  Sarrah.alt = "Team_Blank.png";
+  leadPhotos.append(Sarrah);
+  const Yogitha = document.createElement('img');
+  Yogitha.classList.add('circle', 'show');
+  Yogitha.src = "Yogitha.png";
+  Yogitha.alt = "Team_Blank.png";
+  leadPhotos.append(Yogitha);
+  const Apy = document.createElement('img');
+  Apy.classList.add('circle', 'show');
+  Apy.src = "Apy.png";
+  Apy.alt = "Team_Blank.png";
+  leadPhotos.append(Apy);
+  const Audrey = document.createElement('img');
+  Audrey.classList.add('circle', 'show');
+  Audrey.src = "Team_Blank.png";
+  Audrey.alt = "Team_Blank.png";
+  leadPhotos.append(Audrey);
+  const Diggy = document.createElement('img');
+  Diggy.classList.add('circle', 'show');
+  Diggy.src = "Diggy.png";
+  Diggy.alt = "Team_Blank.png";
+  leadPhotos.append(Diggy);
+  const Mia = document.createElement('img');
+  Mia.classList.add('circle', 'show');
+  Mia.src = "Mia.png";
+  Mia.alt = "Team_Blank.png";
+  leadPhotos.append(Mia);
+const Pranoy = document.createElement('img');
+  Pranoy.classList.add('circle', 'show');
+  Pranoy.src = "Pranoy.png";
+  Pranoy.alt = "Team_Blank.png";
+  leadPhotos.append(Pranoy);
+  const Sachin = document.createElement('img');
+  Sachin.classList.add('circle', 'show');
+  Sachin.src = "Sachin.png";
+  Sachin.alt = "Team_Blank.png";
+  leadPhotos.append(Sachin);
+
 document.addEventListener('scroll', () => {
     for(const img of leadImages){
         const boundingClientRect = img.getBoundingClientRect();
@@ -271,18 +320,18 @@ class CardCarousel extends DraggingEvent {
     let formula;
    
     if (x <= 0) {
-      formula = 1 - -1 / 5 * x
+      formula = 1 - -1 / 3 * x
       
       return formula
     } else if (x > 0) {
-      formula = 1 - 1 / 5 * x
+      formula = 1 - 1 / 3 * x
       
       return formula
     }
   }
   
   calcScale(x) {
-    const formula = 1 - 1 / 5 * Math.pow(x, 2)
+    const formula = 1 - 1 /9 * Math.pow(x, 2)
     
     if (formula <= 0) {
       return 0 
@@ -324,7 +373,7 @@ class CardCarousel extends DraggingEvent {
     
     if (data != null) {
       this.container.classList.remove("smooth-return")
-      xDist = data.x / 250;
+      xDist = data.x / 150;
     } else {
 
       
