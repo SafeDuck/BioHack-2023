@@ -4,17 +4,7 @@
       <link rel="icon" href="favicon-blue.png">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!-- NAV BAR -->
-      <nav>
-        <ul>
-            <li><a href="#top">BIOHACK</a></li>
-            <li><a href="#about_us_title">About</a></li>
-            <li><a href="#past_winners_title">Winners</a></li>
-            <li><a href="#FAQ_title">FAQ</a></li>
-            <li><a href="#volunteer_title">Volunteer</a></li>
-            <li><a href="#team_title">Team</a></li>
-        </ul>
-      </nav>
+   
       <title>
          BioHack 2023 
       </title>
@@ -30,6 +20,27 @@
       </style>
    </head>
    <body>
+      <header>
+      <div class="navbar">
+         <ul class="links">
+             <li><a href="#top">BIOHACK</a></li>
+             <li><a href="#about_us_title">About</a></li>
+             <li><a href="#past_winners_title">Winners</a></li>
+             <li><a href="#FAQ_title">FAQ</a></li>
+             <li><a href="#volunteer_title">Volunteer</a></li>
+             <li><a href="#team_title">Team</a></li>
+         </ul>
+         <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+      </div>
+      <div class="dropdown">
+             <li><a href="#top">BIOHACK</a></li>
+             <li><a href="#about_us_title">About</a></li>
+             <li><a href="#past_winners_title">Winners</a></li>
+             <li><a href="#FAQ_title">FAQ</a></li>
+             <li><a href="#volunteer_title">Volunteer</a></li>
+             <li><a href="#team_title">Team</a></li>
+      </div>
+      </header>
       <!-- STARS -->
       <div class="bg-animation">
          <div id="stars"></div>
@@ -323,11 +334,19 @@ Visualise will read their emotions, through the AI and ML framework, and will fo
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
    </body>
+   <script src="https://kit.fontawesome.com/fadb827e5a.js" crossorigin="anonymous"></script>
    <script>
-      const toggleButton = document.getElementById('toggleButton');
-      const navList = document.getElementById('nav-list');
-      toggleButton.addEventListener('click', () => {
-          navList.classList.toggle('active');
-      })
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function() {
+         dropDownMenu.classList.toggle('open')
+         const isOpen = dropDownMenu.classList.contains('open')
+
+         toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+      }
    </script>
 </html>

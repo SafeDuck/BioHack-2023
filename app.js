@@ -72,7 +72,7 @@ const Pranoy = document.createElement('img');
   leadPhotos.append(Sachin);
 
 document.addEventListener('scroll', () => {
-    for(const img of leadImages){
+    for(const img of leadPhotos){
         const boundingClientRect = img.getBoundingClientRect();
         const stagger = Math.max(boundingClientRect.height, boundingClientRect.width) * (boundingClientRect.x / document.body.getBoundingClientRect().width);
         const y = boundingClientRect.y + stagger;
