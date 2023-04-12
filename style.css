@@ -2,7 +2,7 @@
     color: white;
     }
     * {
-      margin: 0;
+      /* margin: 0; */
       padding: 0;
       box-sizing: border-box;
   }
@@ -178,8 +178,14 @@ html{scroll-behavior: smooth;}
    .words{
     display: inline-flex;
     flex-direction: column;
-    vertical-align: top;    
-   }
+    vertical-align: top;
+  }
+  @media screen and (max-width: 435px){
+    .words{
+      margin-left: .5em;
+
+    }
+  }
    .date{
     padding: 0px;
     margin: 0px;
@@ -191,6 +197,7 @@ html{scroll-behavior: smooth;}
    .about-us-text{
     font-size: 3.0rem;
     line-height: 1.5;
+
   } 
   @media screen and (max-width: 435px) {
     .title{
@@ -615,6 +622,7 @@ left: calc(-10% - 3px);
 /* FAQ */
 .questions{
     margin-top: 2em;
+    margin-bottom: 1em;
     font-size: 3.5em;
     text-align: center;
     
@@ -639,17 +647,7 @@ left: calc(-10% - 3px);
     padding: 0 0px;
     text-align: center;
   }
-  @media screen and (max-width: 435px){
-    #faq{
-      width: 80%;
-    }
-    #faq h2 {
-      font-size: 1em;
-    }
-    #faq p {
-      font-size: 0.7em;
-    }
-  }
+
   section.faq {
     padding-top: 2em;
     padding-bottom: 3em;
@@ -682,7 +680,7 @@ left: calc(-10% - 3px);
     text-align: center;
     padding-top: 15px;
     text-transform: none;
-    font-weight: 300;
+    /* font-weight: 300; */
     letter-spacing: 1px;
     display: block;
     margin: auto;
@@ -712,7 +710,19 @@ left: calc(-10% - 3px);
     hyphens: auto;
     z-index: 2;
   }
-  
+  @media screen and (max-width: 435px){
+    #faq{
+      width: 80%;
+    }
+    #faq h2 {
+      font-size: 1.2em;
+      width: 15rem;
+    }
+    #faq p {
+      font-size: 1em;
+      padding: 0 20px 0 20px;
+    }
+  }
   #faq ul {
     list-style: none;
     perspective: 900;
