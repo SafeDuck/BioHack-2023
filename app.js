@@ -27,7 +27,7 @@ const directorData = [
   {
     name: "Gagan",
     imageSrc: null,
-    role: "Director",
+    role: "Assistant Director",
   },
 ];
 
@@ -73,42 +73,42 @@ const leadPersonData = [
   {
     name: "Sarrah",
     imageSrc: "Sarrah.png",
-    role: "",
+    role: "Operations",
   },
   {
     name: "Yogitha",
     imageSrc: "Yogitha.png",
-    role: "",
+    role: "Operations",
   },
   {
     name: "Apy",
     imageSrc: "Apy.png",
-    role: "",
+    role: "Sponsorship",
   },
   {
     name: "Audrey",
     imageSrc: "",
-    role: "",
+    role: "Sponsorship",
   },
   {
     name: "Diggy",
     imageSrc: "Diggy.png",
-    role: "",
+    role: "Marketing",
   },
   {
     name: "Mia",
     imageSrc: "Mia.png",
-    role: "",
+    role: "Marketing",
   },
   {
     name: "Pranoy",
     imageSrc: "Pranoy.png",
-    role: "",
+    role: "Web Development",
   },
   {
     name: "Sachin",
     imageSrc: "Sachin.png",
-    role: "",
+    role: "Web Development",
   },
 ];
 
