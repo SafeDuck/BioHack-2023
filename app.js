@@ -12,72 +12,115 @@
 // const hiddenElements = document.querySelectorAll('.hidden');
 // hiddenElements.forEach((el) => observer.observe(el));
 const directorPhotos = document.querySelector('#directors');
-const Evelyn = document.createElement('img');
-  Evelyn.classList.add('circle', 'show');
-  Evelyn.src = "Evelyn.png";
-  Evelyn.alt = "Team_Blank.png";
-  directorPhotos.append(Evelyn);
-const Jimmy = document.createElement('img');
-  Jimmy.classList.add('circle', 'show');
-  Jimmy.src = "Jimmy.png";
-  Jimmy.alt = "Team_Blank.png";
-  directorPhotos.append(Jimmy);
-  const Gagan = document.createElement('img');
-  Gagan.classList.add('circle', 'show');
-  Gagan.src = "Team_Blank.png";
-  Gagan.alt = "Team_Blank.png";
-  directorPhotos.append(Gagan);
 
+const directorData = [
+  {
+    name: "Evelyn",
+    imageSrc: "Evelyn.png",
+    role: "Director",
+  },
+  {
+    name: "Jimmy",
+    imageSrc: "Jimmy.png",
+    role: "Director",
+  },
+  {
+    name: "Gagan",
+    imageSrc: null,
+    role: "Director",
+  },
+];
+
+function addPhotos(htmlContainer, personList){
+  return personList.map(({name, imageSrc, role}) => {
+    const container = document.createElement('div');
+    const nameLabel = document.createElement('div');
+    const roleLabel = document.createElement('div');
+    const img = document.createElement('img');
+    // todo: make these classes
+    /* 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    */
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    container.style.alignItems = 'center';
+    container.style.zIndex = 1;
+    container.style.paddingBottom = container.style.paddingTop = '0.5rem';
+    container.style.transition = 'transform 1s ease-in-out';
+
+    img.classList.add('circle', 'show');
+    img.src = imageSrc || "Team_Blank.png";
+    nameLabel.innerText = name;
+    nameLabel.style.fontSize = '1.5rem';
+    nameLabel.style.paddingTop = '0.2rem';
+    
+    roleLabel.innerText = role || "";
+    roleLabel.style.fontSize = '1.2rem';
+    roleLabel.style.paddingTop = '0.2rem';
+
+    nameLabel.style.filter = roleLabel.style.filter = 'drop-shadow(0 0 2px white)';
+
+    container.append(img, nameLabel, roleLabel);
+    htmlContainer.append(container);
+    return container;
+  });
+}
 const leadPhotos = document.querySelector('#lead-photos');
-const teamPics = [...new Array(11)];
-  const Sarrah = document.createElement('img');
-  Sarrah.classList.add('circle', 'show');
-  Sarrah.src = "Sarrah.png";
-  Sarrah.alt = "Team_Blank.png";
-  leadPhotos.append(Sarrah);
-  const Yogitha = document.createElement('img');
-  Yogitha.classList.add('circle', 'show');
-  Yogitha.src = "Yogitha.png";
-  Yogitha.alt = "Team_Blank.png";
-  leadPhotos.append(Yogitha);
-  const Apy = document.createElement('img');
-  Apy.classList.add('circle', 'show');
-  Apy.src = "Apy.png";
-  Apy.alt = "Team_Blank.png";
-  leadPhotos.append(Apy);
-  const Audrey = document.createElement('img');
-  Audrey.classList.add('circle', 'show');
-  Audrey.src = "Team_Blank.png";
-  Audrey.alt = "Team_Blank.png";
-  leadPhotos.append(Audrey);
-  const Diggy = document.createElement('img');
-  Diggy.classList.add('circle', 'show');
-  Diggy.src = "Diggy.png";
-  Diggy.alt = "Team_Blank.png";
-  leadPhotos.append(Diggy);
-  const Mia = document.createElement('img');
-  Mia.classList.add('circle', 'show');
-  Mia.src = "Mia.png";
-  Mia.alt = "Team_Blank.png";
-  leadPhotos.append(Mia);
-const Pranoy = document.createElement('img');
-  Pranoy.classList.add('circle', 'show');
-  Pranoy.src = "Pranoy.png";
-  Pranoy.alt = "Team_Blank.png";
-  leadPhotos.append(Pranoy);
-  const Sachin = document.createElement('img');
-  Sachin.classList.add('circle', 'show');
-  Sachin.src = "Sachin.png";
-  Sachin.alt = "Team_Blank.png";
-  leadPhotos.append(Sachin);
+const leadPersonData = [
+  {
+    name: "Sarrah",
+    imageSrc: "Sarrah.png",
+    role: "",
+  },
+  {
+    name: "Yogitha",
+    imageSrc: "Yogitha.png",
+    role: "",
+  },
+  {
+    name: "Apy",
+    imageSrc: "Apy.png",
+    role: "",
+  },
+  {
+    name: "Audrey",
+    imageSrc: "",
+    role: "",
+  },
+  {
+    name: "Diggy",
+    imageSrc: "Diggy.png",
+    role: "",
+  },
+  {
+    name: "Mia",
+    imageSrc: "Mia.png",
+    role: "",
+  },
+  {
+    name: "Pranoy",
+    imageSrc: "Pranoy.png",
+    role: "",
+  },
+  {
+    name: "Sachin",
+    imageSrc: "Sachin.png",
+    role: "",
+  },
+];
+
+const elementsToScrollIn = [...addPhotos(directorPhotos, directorData), ...addPhotos(leadPhotos, leadPersonData)];
 
 document.addEventListener('scroll', () => {
-    for(const img of leadPhotos){
-        const boundingClientRect = img.getBoundingClientRect();
+    for(const element of elementsToScrollIn){
+        const boundingClientRect = element.getBoundingClientRect();
         const stagger = Math.max(boundingClientRect.height, boundingClientRect.width) * (boundingClientRect.x / document.body.getBoundingClientRect().width);
         const y = boundingClientRect.y + stagger;
         const offset = Math.max(y-window.innerHeight*1.2, 0) > 0 ? 2000 : 0;
-        img.style.transform = `translateX(${-offset}px)`;
+        element.style.transform = `translateX(${-offset}px)`;
     }
 });
 
