@@ -56,10 +56,12 @@ function addPhotos(htmlContainer, personList){
     nameLabel.innerText = name;
     nameLabel.style.fontSize = '1.5rem';
     nameLabel.style.paddingTop = '0.2rem';
+    nameLabel.style.color = "white";
     
     roleLabel.innerText = role || "";
     roleLabel.style.fontSize = '1.2rem';
     roleLabel.style.paddingTop = '0.2rem';
+    roleLabel.style.color = "white";
 
     nameLabel.style.filter = roleLabel.style.filter = 'drop-shadow(0 0 2px white)';
 
