@@ -26,7 +26,7 @@ const directorData = [
   },
   {
     name: "Gagan",
-    imageSrc: null,
+    imageSrc: "Gagan.png",
     role: "Assistant Director",
   },
 ];
@@ -89,7 +89,7 @@ const leadPersonData = [
   },
   {
     name: "Audrey",
-    imageSrc: "",
+    imageSrc: "Audrey.png",
     role: "Sponsorship",
   },
   {
