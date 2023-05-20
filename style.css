@@ -68,22 +68,123 @@ html{scroll-behavior: smooth;}
    .apply-button:active{
     transform: scale(0.95);
    }
-   .volunteer-button{
+   .check-in-button {
     margin-top: 3rem;
     width: 20rem;
-   }
-   .volunteer-button:hover{
+    color: #03e9f4;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+  }
+  .discord-button{
+    margin-top: 3rem;
+    width: 20rem;
+  }
+  .discord-button:hover{
     background: #ffffff8d;
     box-shadow: 0 0 5px #ffffff5b, 0 0 25px
     #97B0F2, 0 0 50px #97B0F2, 0 0 200px #ffffff5b;
     cursor: pointer;
    }
-   .volunteer-button:active{
+   .discord-button:active{
+    transform: scale(0.95);
+   }
+  .check-in-button:nth-child(1) {
+    filter: hue-rotate(270deg);
+  }
+  .check-in-button:nth-child(2) {
+    filter: hue-rotate(110deg);
+  }
+   .thing {
+    position: absolute;
+    display: block;
+  }
+  .check-in-button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, white);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes animate1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+  /* .check-in-button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, white);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes animate2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+  } */
+  .check-in-button span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, white);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes animate3 {
+    0% {
+      right: -100%;
+    }
+    50%,
+    100% {
+      right: 100%;
+    }
+  }
+
+  .check-in-button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes animate4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,
+    100% {
+      bottom: 100%;
+    }
+  }
+
+   .check-in-button:hover{
+    background: #ffffff8d;
+    box-shadow: 0 0 5px #ffffff5b, 0 0 25px
+    #97B0F2, 0 0 50px #97B0F2, 0 0 200px #ffffff5b;
+    cursor: pointer;
+   }
+   .check-in-button:active{
     transform: scale(0.95);
    }
    header {
     position: relative;
    }
+   
    .navbar {
     display: flex;
     align-items: center;
@@ -159,7 +260,7 @@ html{scroll-behavior: smooth;}
    .title{
     max-width: 100%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
    }
@@ -212,6 +313,7 @@ html{scroll-behavior: smooth;}
     line-height: 1.5;
 
   } 
+
   @media screen and (max-width: 435px) {
     .title{
       align-items: center;
@@ -242,7 +344,13 @@ html{scroll-behavior: smooth;}
       width: 50%;
       font-size: 1rem;
     }
-    .volunteer-button{
+    .check-in-button{
+      
+      width: 50%;
+      font-size: 1rem;
+      margin-top: 2.3rem;
+    }
+    .discord-button{
       
       width: 50%;
       font-size: 1rem;
