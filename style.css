@@ -102,56 +102,23 @@ html{scroll-behavior: smooth;}
     gap: 2rem;
   }
 
-  .navbar .toggle_btn {
-    color: black;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-  }
+  
 
-  .dropdown {
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    width: 300px;
-    background: #fffffff5;
-    border-radius: 10px;
-    overflow: hidden;
-    display: none;
-    height: 0;
-    transition: height 0.2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
-  .dropdown .open {
-    height: 240px;
-  }
-
-  .dropdown li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  
 
   @media screen and (max-width: 435px) {
+    .navbar {
+      display: none;
+    }
     .navbar .links {
       display: none;
     }
 
     .navbar .toggle_btn {
-      display: block;
+      display: none;
     }
 
-    .dropdown {
-      display: block;
-    }
-  }
-  @media screen and (max-width: 435px) {
-    .dropdown {
-      left: 2rem;
-      width: unset;
-
-    }
+    
   }
 
   /* TITLE AND LOGO */
@@ -594,17 +561,106 @@ left: calc(-10% - 3px);
   padding-top: 7rem;
 }
 
+/*SPONSORS*/
+.sponsors{
+  background: linear-gradient(180deg, lightblue, #16134B);
+  padding-bottom: 2rem;
+  
+}
+.sponsors-text{
+  font-size: 4em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: -20%;
+  color: black;
+  margin-bottom:  10%;
+}
+.sponsors-box{
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+  margin: 5%;
+}
+.appl-med-size{
+  width: 20%;
+  z-index: 5;
+  position: relative;
+}
+.asucr-size{
+  width: 25%;
+  z-index: 5;
+  position: relative;
+}
+.bcoe-size{
+  width: 25%;
+  z-index: 5;
+  position: relative;
+}
+.blackstone-size{
+  width: 25%;
+  z-index: 5;
+  position: relative;
+}
+.bmes-size{
+  width: 25%;
+  z-index: 5;
+  position: relative;
+}
+.cyber-size{
+  width: 20%;
+  z-index: 5;
+  position: relative;
+}
+.gcap-size{
+  width: 20%;
+  z-index: 5;
+  position: relative;
+}
+
+@media screen and (max-width: 435px){
+  .sponsors-text{
+    font-size: 2rem;
+  }
+  .sponsors-box{
+    max-width: 100%;
+    gap: 2rem;   
+  }
+  .appl-med-size{
+    width: 40%;
+  }
+  .asucr-size{
+    width: 45%;
+  }
+  .bcoe-size{
+    width: 45%;
+  }
+  .blackstone-size{
+    width: 45%;
+  }
+  .bmes-size{
+    width: 45%;
+  }
+  .cyber-size{
+    width: 40%;
+  }
+  .gcap-size{
+    width: 40%;
+  }
+}
+
 /* OUR TEAM */
 
 .our-team{
-  background: linear-gradient(180deg, lightblue, #16134B);
+  background: #16134B;
   padding-bottom: 10rem;
 }
 .our-team-text{
   font-size: 4em;
   text-align: center;
   margin-top: 0;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .circle{
   width: 15em;

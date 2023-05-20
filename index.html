@@ -30,17 +30,20 @@
              <li><a href="#volunteer_title">Volunteer</a></li>
              <li><a href="#team_title">Team</a></li>
          </ul>
-         <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
       </div>
-      <div class="dropdown">
+
+      <!-- <div class="dropdown">
+         <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+         <ul class="links"></ul>
              <li><a href="#top">BIOHACK</a></li>
              <li><a href="#about_us_title">About</a></li>
              <li><a href="#past_winners_title">Winners</a></li>
              <li><a href="#FAQ_title">FAQ</a></li>
              <li><a href="#volunteer_title">Volunteer</a></li>
              <li><a href="#team_title">Team</a></li>
+         </ul>
       </div>
-      </header>
+      </header> -->
       <!-- STARS -->
       <div class="bg-animation">
          <div id="stars"></div>
@@ -293,6 +296,20 @@ Visualise will read their emotions, through the AI and ML framework, and will fo
             <p class="get-involved-text">Not interested in hacking, but still interested in the behind-the-scenes of BioHack? Great! We'd love to have you on our team.</p>
          </div>
       </div>
+      <!--SPONSORS-->
+      <div class="sponsors">
+         <p class="sponsors-text">Sponsors</p>
+         <div class="sponsors-box">
+            <img class="appl-med-size" src="appliedmedical.png" alt="appliedmedical.png">
+            <img class="asucr-size" src="asucr.png" alt="asucr.png">
+            <img class="bcoe-size" src="bcoe.png" alt="bcoe.png">
+            <img class="blackstone-size" src="blackstone.png" alt="blackstone.png">
+            <img class="bmes-size" src="bmesucr.png" alt="bmesucr.png">
+            <img class="cyber-size" src="cyber.png" alt="cyber.png">
+            <img class="gcap-size" src="gcap.png" alt="gcap.png">
+            
+         </div>
+      </div>
       <!-- TEAM -->
       <div class="our-team">
          <p class="our-team-text"><a id="team_title"></a>Our Team</p>
@@ -339,20 +356,24 @@ Visualise will read their emotions, through the AI and ML framework, and will fo
       </footer>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   </body>
-   <script src="https://kit.fontawesome.com/fadb827e5a.js" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/fadb827e5a.js" crossorigin="anonymous"></script>
    <script>
-      const toggleBtn = document.querySelector('.toggle_btn')
-      const toggleBtnIcon = document.querySelector('.toggle_btn i')
-      const dropDownMenu = document.querySelector('.dropdown_menu')
+     // JavaScript code for toggling the dropdown menu on mobile devices
+      const toggleBtn = document.querySelector('.toggle_btn');
+      const links = document.querySelector('.links');
+      const dropdown = document.querySelector('.dropdown');
 
-      toggleBtn.onclick = function() {
-         dropDownMenu.classList.toggle('open')
-         const isOpen = dropDownMenu.classList.contains('open')
+      toggleBtn.addEventListener('click', () => {
+      links.style.display = links.style.display === 'none' ? 'flex' : 'none';
+      });
 
-         toggleBtnIcon.classList = isOpen
-            ? 'fa-solid fa-xmark'
-            : 'fa-solid fa-bars'
-      }
+      // Close the dropdown menu when a link is clicked
+      const linkItems = document.querySelectorAll('.dropdown .links li a');
+      linkItems.forEach((link) => {
+      link.addEventListener('click', () => {
+         links.style.display = 'none';
+      });
+      });
    </script>
+   </body>
 </html>
