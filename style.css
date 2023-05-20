@@ -33,13 +33,26 @@ html{scroll-behavior: smooth;}
     overflow-x: clip;
    }
    
+   .all-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   }
+
+   @media screen and (max-width: 435px) {
+      .all-buttons{
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+      }
+    }
+
    /* APPLY BUTTON  */
 
    button{
-    display: flex;
     width: 30rem;
     justify-content: center;
-    margin: auto;
     background-color: #ffffff5b;
     color: rgb(255, 255, 255);
     border-radius: 32px;
@@ -53,6 +66,7 @@ html{scroll-behavior: smooth;}
     transition: .4s ease-in;
     z-index: 1;
    }
+
    button::before,
    button::after{
     position: absolute;
@@ -218,8 +232,6 @@ html{scroll-behavior: smooth;}
     .navbar .toggle_btn {
       display: none;
     }
-
-    
   }
 
   /* TITLE AND LOGO */
