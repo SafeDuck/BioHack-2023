@@ -39,12 +39,21 @@ html{scroll-behavior: smooth;}
     justify-content: space-evenly;
     flex-wrap: wrap;
    }
+   .applications-box{
+    text-align: center;
+   }
+   .applications-title{
+    font-size: 4rem;
+}
 
    @media screen and (max-width: 435px) {
       .all-buttons{
         flex-direction: column;
         margin: auto;
         align-items: center;
+      }
+      .applications-title{
+        font-size: 2rem;
       }
     }
 
